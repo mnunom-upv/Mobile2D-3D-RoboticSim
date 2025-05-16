@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="42dp"
+    android:height="42dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Forma del octágono -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M50,5
+                          L85,15
+                          L95,50
+                          L85,85
+                          L50,95
+                          L15,85
+                          L5,50
+                          L15,15
+                          Z" />
+
+    <!-- Texto STOP -->
+    <group android:scaleX="1" android:scaleY="1" android:translateX="18" android:translateY="45">
+
+    </group>
+</vector>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Robot Control Panel"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FF9FF3"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/quirkyrobot"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#1A1A1A">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Controls Guide"
+                    android:textColor="#A2FFE9"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/robot"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• PLAY: Execute all programmed instructions.\n\n• DELETE: Delete the last instruction.\n\n• REFRESH: Reset the robot to the initial position.\n\n• OBSTACLE: Toggle obstacle placement mode\n\n• FORWARD: Move the robot one step forward\n\n• TURN LEFT: Turn the robot 90° to the left\n\n• TURN RIGHT: Turn the robot 90° to the right"                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/robot"
+                    android:lineSpacingExtra="8dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="START MISSION"
+            android:backgroundTint="#FF69B4"
+            android:textColor="#FFFFFF"
+            android:padding="16dp"
+            android:fontFamily="@font/robot"/>
+
+    </LinearLayout>
+</ScrollView>

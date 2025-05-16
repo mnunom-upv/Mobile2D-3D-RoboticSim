@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/glSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/connectionStatusView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B71C1C"
+        android:padding="8dp"
+        android:text="No connection to server"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <!-- Panel de control semitransparente -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#33000000"
+        android:padding="16dp"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/txtDecision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Decision: N/A"
+            android:textColor="#FFC107"
+            android:textSize="14sp"
+            tools:ignore="MissingConstraints" />
+
+
+        <ImageButton
+            android:id="@+id/btnForward"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/control_button_background"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btnLeft"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/control_button_background"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintTop_toBottomOf="@id/btnForward"
+            app:layout_constraintEnd_toStartOf="@id/btnReset"/>
+
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/control_button_stop_background"
+            android:src="@drawable/ic_stop"
+            android:text="GO BACK"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnForward" />
+
+        <ImageButton
+            android:id="@+id/btnRight"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/control_button_background"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toBottomOf="@id/btnForward"
+            app:layout_constraintStart_toEndOf="@id/btnReset"/>
+
+        <ImageButton
+            android:id="@+id/bntBackward"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/control_button_background"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintTop_toBottomOf="@id/btnReset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
